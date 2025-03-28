@@ -36,6 +36,7 @@
         "file-saver": "^2.0.5",
         "file-upload-with-preview": "^6.0.2",
         "flatpickr": "^4.6.13",
+        "gaugeJS": "^1.3.9",
         "headlessui-angular": "^0.0.9",
         "ng-apexcharts": "^1.11.0",
         "ng2-nouislider": "^2.0.0",

@@ -24,6 +24,7 @@ import { IconMenuTablesComponent } from './menu/icon-menu-tables';
 import { IconMenuTodoComponent } from './menu/icon-menu-todo';
 import { IconMenuUsersComponent } from './menu/icon-menu-users';
 import { IconMenuWidgetsComponent } from './menu/icon-menu-widgets';
+import { IconMenuCaddyComponent } from './menu/icon-menu-caddy';
 import { IconAirplayComponent } from './icon-airplay';
 import { IconLoadingComponent } from './icon-loader';
 import { IconArchiveComponent } from './icon-archive';
@@ -191,6 +192,7 @@ import { IconCodeFileComponent } from 'src/app/shared/icon/icon-code-file';
         IconMenuTodoComponent,
         IconMenuUsersComponent,
         IconMenuWidgetsComponent,
+        IconMenuCaddyComponent,
         IconAirplayComponent,
         IconArchiveComponent,
         IconArrowBackwardComponent,
@@ -356,6 +358,7 @@ import { IconCodeFileComponent } from 'src/app/shared/icon/icon-code-file';
         IconMenuTodoComponent,
         IconMenuUsersComponent,
         IconMenuWidgetsComponent,
+        IconMenuCaddyComponent,
         IconAirplayComponent,
         IconArchiveComponent,
         IconArrowBackwardComponent,

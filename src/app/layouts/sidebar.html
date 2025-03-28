@@ -19,8 +19,39 @@
                         <button
                             type="button"
                             class="nav-link group w-full"
+                            [ngClass]="{ active: activeDropdown.includes('caddy') }"
+                            (click)="toggleAccordion('caddy')"
+                            data-dropdown-name="caddy"
+                        >
+                            <div class="flex items-center">
+                                <icon-menu-caddy class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
+
+                                <span class="text-[#E5E5E5] dark:text-[#E5E5E5] dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">
+                                    Caddy
+                                </span>
+                            </div>
+                            <div [ngClass]="{ 'rtl:rotate-90 -rotate-90': !activeDropdown.includes('caddy') }" class="text-[#5BA38F]">
+                                <icon-caret-down />
+                            </div>
+                        </button>
+                        <div [@slideDownUp]="!activeDropdown.includes('caddy')" class="accordion-content">
+                            <ul class="sub-menu text-[#E5E5E5]">
+                                <li>
+                                    <a routerLink="/" routerLinkActive="active text-[#5BA38F]" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()"
+                                        >Dashboard</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion menu nav-item">
+                        <button
+                            type="button"
+                            class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('dashboard') }"
                             (click)="toggleAccordion('dashboard')"
+                            data-dropdown-name="dashboard"
                         >
                             <div class="flex items-center">
                                 <icon-menu-dashboard class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
@@ -36,7 +67,7 @@
                         <div [@slideDownUp]="!activeDropdown.includes('dashboard')" class="accordion-content">
                             <ul class="sub-menu text-[#E5E5E5]">
                                 <li>
-                                    <a routerLink="/" routerLinkActive="active text-[#5BA38F]" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileMenu()"
+                                    <a routerLink="/sales" routerLinkActive="active text-[#5BA38F]" (click)="toggleMobileMenu()"
                                         >{{ 'sales' | translate }}</a
                                     >
                                 </li>
@@ -133,6 +164,7 @@
                                     class="nav-link group w-full"
                                     [ngClass]="{ active: activeDropdown.includes('invoice') }"
                                     (click)="toggleAccordion('invoice')"
+                                    data-dropdown-name="invoice"
                                 >
                                     <div class="flex items-center">
                                         <icon-menu-invoice class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
@@ -194,6 +226,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('components') }"
                             (click)="toggleAccordion('components')"
+                            data-dropdown-name="components"
                         >
                             <div class="flex items-center">
                                 <icon-menu-components class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
@@ -339,6 +372,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('datatables') }"
                             (click)="toggleAccordion('datatables')"
+                            data-dropdown-name="datatables"
                         >
                             <div class="flex items-center">
                                 <icon-menu-datatables class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
@@ -423,6 +457,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('forms') }"
                             (click)="toggleAccordion('forms')"
+                            data-dropdown-name="forms"
                         >
                             <div class="flex items-center">
                                 <icon-menu-forms class="shrink-0 text-[#5BA38F] group-hover:!text-[#5BA38F]" />
@@ -499,6 +534,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('users') }"
                             (click)="toggleAccordion('users')"
+                            data-dropdown-name="users"
                         >
                             <div class="flex items-center">
                                 <icon-menu-users class="shrink-0 text-[#FFFFFF] group-hover:!text-[#5BA38F]" />
@@ -529,6 +565,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('pages')}"
                             (click)="toggleAccordion('pages')"
+                            data-dropdown-name="pages"
                         >
                             <div class="flex items-center">
                                 <icon-menu-pages class="shrink-0 text-[#FFFFFF] group-hover:!text-[#5BA38F]" />
@@ -600,6 +637,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('authentication') }"
                             (click)="toggleAccordion('authentication')"
+                            data-dropdown-name="authentication"
                         >
                             <div class="flex items-center">
                                 <icon-menu-authentication class="shrink-0 text-[#FFFFFF] group-hover:!text-[#5BA38F]" />
@@ -665,6 +703,7 @@
                             class="nav-link group w-full"
                             [ngClass]="{ active: activeDropdown.includes('elements') }"
                             (click)="toggleAccordion('elements')"
+                            data-dropdown-name="elements"
                         >
                             <div class="flex items-center">
                                 <icon-menu-elements class="shrink-0 text-[#FFFFFF] group-hover:!text-[#5BA38F]" />

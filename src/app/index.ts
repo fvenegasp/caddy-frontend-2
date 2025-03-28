@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { toggleAnimation } from 'src/app/shared/animations';
 
@@ -6,7 +6,7 @@ import { toggleAnimation } from 'src/app/shared/animations';
     templateUrl: './index.html',
     animations: [toggleAnimation],
 })
-export class IndexComponent {
+export class IndexComponent implements OnInit {
     store: any;
     revenueChart: any;
     salesByCategory: any;
@@ -405,5 +405,25 @@ export class IndexComponent {
                 },
             ],
         };
+    }
+
+    ngOnInit() {
+        // Forzar la activación del dropdown de Dashboard al cargar este componente
+        // Esto lo hacemos para asegurar que solo la sección de Dashboard está activa
+        setTimeout(() => {
+            const dashboardDropdown = document.querySelector('button[data-dropdown-name="dashboard"]');
+            if (dashboardDropdown && !dashboardDropdown.classList.contains('active')) {
+                (dashboardDropdown as HTMLElement).click();
+            }
+            
+            // Aseguramos que el dropdown de Caddy no esté activo
+            const caddyDropdown = document.querySelector('button[data-dropdown-name="caddy"]');
+            if (caddyDropdown && caddyDropdown.classList.contains('active')) {
+                (caddyDropdown as HTMLElement).click();
+            }
+        }, 200);
+        
+        // Inicialización de los gráficos
+        this.initCharts();
     }
 }

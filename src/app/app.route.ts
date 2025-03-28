@@ -5,6 +5,7 @@ import { IndexComponent } from './index';
 import { AnalyticsComponent } from './analytics';
 import { FinanceComponent } from './finance';
 import { CryptoComponent } from './crypto';
+import { DashboardComponent } from './components/caddy/dashboard/dashboard.component';
 
 // widgets
 import { WidgetsComponent } from './widgets';
@@ -35,7 +36,8 @@ export const routes: Routes = [
         component: AppLayout,
         children: [
             // dashboard
-            { path: '', component: IndexComponent, data: { title: 'Sales Admin' } },
+            { path: '', component: DashboardComponent, data: { title: 'Caddy Dashboard' } },
+            { path: 'sales', component: IndexComponent, data: { title: 'Sales Admin' } },
             { path: 'analytics', component: AnalyticsComponent, data: { title: 'Analytics Admin' } },
             { path: 'finance', component: FinanceComponent, data: { title: 'Finance Admin' } },
             { path: 'crypto', component: CryptoComponent, data: { title: 'Crypto Admin' } },
