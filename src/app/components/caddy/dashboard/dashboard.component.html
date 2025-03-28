@@ -705,4 +705,309 @@
             </div>
         </div>
     </div>
+    
+    <!-- Nueva fila para el Mapa de Riesgos -->
+    <div class="pt-6">
+        <div class="panel h-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <div class="relative flex flex-col h-full bg-gradient-to-br from-[#1A103C] to-[#2D1D56] rounded-md p-6 overflow-hidden">
+                <!-- Elementos decorativos sutiles -->
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                    <div class="absolute -top-20 -left-20 w-80 h-80 bg-[#4A2E8B] rounded-full"></div>
+                    <div class="absolute -bottom-20 -right-20 w-60 h-60 bg-[#5E43A9] rounded-full"></div>
+                </div>
+                
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-6 relative z-10">
+                    <div class="flex items-center">
+                        <div class="bg-[#F59E0B]/20 rounded-xl w-14 h-14 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#F59E0B]" viewBox="0 0 24 24" fill="none">
+                                <path d="M10.5 3.75H12.75V12.75L10.5 10.5H7.5C6.90326 10.5 6.33097 10.2629 5.90901 9.84099C5.48705 9.41903 5.25 8.84674 5.25 8.25V6C5.25 5.40326 5.48705 4.83097 5.90901 4.40901C6.33097 3.98705 6.90326 3.75 7.5 3.75H10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 3.75H19.5C19.6989 3.75 19.8897 3.79399 20.0643 3.87433C20.2388 3.95467 20.393 4.06911 20.5168 4.21179C20.6405 4.35447 20.7308 4.5223 20.7809 4.70384C20.8309 4.88537 20.8396 5.07465 20.8064 5.25937C20.7732 5.4441 20.699 5.62037 20.5881 5.77453C20.4773 5.92869 20.3325 6.05657 20.1635 6.14975C19.9945 6.24293 19.8055 6.29887 19.612 6.31333C19.4185 6.32778 19.2248 6.30041 19.0425 6.23438" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 8.25H16.5C17.0967 8.25 17.669 8.48705 18.091 8.90901C18.5129 9.33097 18.75 9.90326 18.75 10.5V12.75C18.75 13.3467 18.5129 13.919 18.091 14.341C17.669 14.7629 17.0967 15 16.5 15H13.5L11.25 17.25V8.25H13.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.99707 15H5.24707C4.65033 15 4.07804 14.7629 3.65608 14.341C3.23412 13.919 2.99707 13.3467 2.99707 12.75V10.5C2.99707 9.90326 3.23412 9.33097 3.65608 8.90901C4.07804 8.48705 4.65033 8.25 5.24707 8.25H5.99707" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.25 20.25L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-bold text-white uppercase tracking-wide">MAPA DE RIESGOS</h5>
+                            <div class="text-sm text-[#A0AEC0]">• Evaluación de exposición</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-amber-400">Actualizado hoy</div>
+                </div>
+                
+                <!-- Contenido principal: Mapa de calor y distribución -->
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Mapa de calor - ocupa 2/3 del espacio -->
+                    <div class="col-span-2">
+                        <div class="mb-4 flex justify-between items-center">
+                            <div class="text-white text-lg font-medium">Mapa de calor de riesgos</div>
+                            <div class="flex space-x-1">
+                                <div class="w-4 h-4 bg-green-500 rounded-sm"></div>
+                                <div class="w-4 h-4 bg-yellow-500 rounded-sm"></div>
+                                <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                                <div class="w-4 h-4 bg-red-500 rounded-sm"></div>
+                            </div>
+                        </div>
+
+                        <!-- Matriz de riesgos 5x5 -->
+                        <div class="relative grid grid-cols-5 gap-1 mb-3">
+                            <!-- Primera fila -->
+                            <div class="bg-[#1F2937]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#1F2937]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#3D2647]/50 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-xs font-bold text-white">P2</div>
+                            </div>
+                            <div class="bg-[#3D2647]/50 h-14 rounded-sm"></div>
+                            
+                            <!-- Segunda fila -->
+                            <div class="bg-[#1F2937]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#1F2937]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center text-xs font-bold text-white">C3</div>
+                            </div>
+                            <div class="bg-[#2D3A51]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#3D2647]/70 h-14 rounded-sm"></div>
+                            <div class="bg-[#581F43]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-400 rounded-full flex items-center justify-center text-xs font-bold text-white">R1</div>
+                            </div>
+                            
+                            <!-- Tercera fila -->
+                            <div class="bg-[#1F2937]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-bold text-white">M4</div>
+                            </div>
+                            <div class="bg-[#3D2647]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center text-xs font-bold text-white">A3</div>
+                            </div>
+                            <div class="bg-[#581F43]/70 h-14 rounded-sm"></div>
+                            
+                            <!-- Cuarta fila -->
+                            <div class="bg-[#1F2937]/70 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/70 h-14 rounded-sm"></div>
+                            <div class="bg-[#4D263C]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center text-xs font-bold text-white">A1</div>
+                            </div>
+                            <div class="bg-[#581F43]/90 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-400 rounded-full flex items-center justify-center text-xs font-bold text-white">R3</div>
+                            </div>
+                            
+                            <!-- Quinta fila -->
+                            <div class="bg-[#1F2937]/70 h-14 rounded-sm"></div>
+                            <div class="bg-[#2D3A51]/70 h-14 rounded-sm"></div>
+                            <div class="bg-[#3D2647]/50 h-14 rounded-sm"></div>
+                            <div class="bg-[#4D263C]/70 h-14 rounded-sm relative">
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-400 rounded-full flex items-center justify-center text-xs font-bold text-white">R2</div>
+                            </div>
+                            <div class="bg-[#581F43]/90 h-14 rounded-sm"></div>
+                            
+                            <!-- Etiquetas laterales -->
+                            <div class="absolute -left-10 top-1/2 transform -translate-y-1/2 flex flex-col justify-between h-full">
+                                <div class="text-xs text-white rotate-270">Probabilidad</div>
+                            </div>
+                            
+                            <!-- Etiqueta inferior -->
+                            <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-full text-center">
+                                <div class="text-xs text-white">Impacto</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Leyenda de colores -->
+                        <div class="flex items-center justify-start space-x-4 mt-8">
+                            <div class="flex items-center text-sm text-white space-x-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-sm"></div>
+                                <span>Bajo</span>
+                            </div>
+                            <div class="flex items-center text-sm text-white space-x-2">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-sm"></div>
+                                <span>Medio</span>
+                            </div>
+                            <div class="flex items-center text-sm text-white space-x-2">
+                                <div class="w-3 h-3 bg-orange-500 rounded-sm"></div>
+                                <span>Alto</span>
+                            </div>
+                            <div class="flex items-center text-sm text-white space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-sm"></div>
+                                <span>Crítico</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Distribución por nivel - ocupa 1/3 del espacio -->
+                    <div>
+                        <div class="mb-4">
+                            <div class="text-white text-lg font-medium">Distribución por nivel</div>
+                        </div>
+                        
+                        <!-- Gráfico semicircular con total -->
+                        <div class="flex flex-col items-center justify-center mb-6 relative">
+                            <div class="relative w-48 h-32">
+                                <!-- Arcos de progreso superpuestos -->
+                                <svg viewBox="0 0 200 100" class="w-full h-full">
+                                    <!-- Arco para Crítico -->
+                                    <path d="M10,100 A90,90 0 0,1 190,100" fill="none" stroke="#E11D48" stroke-width="12" stroke-linecap="round" />
+                                    <!-- Arco para Alto -->
+                                    <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#F97316" stroke-width="12" stroke-linecap="round" />
+                                    <!-- Arco para Medio -->
+                                    <path d="M30,100 A70,70 0 0,1 170,100" fill="none" stroke="#FBBF24" stroke-width="12" stroke-linecap="round" />
+                                    <!-- Arco para Bajo -->
+                                    <path d="M40,100 A60,60 0 0,1 160,100" fill="none" stroke="#22C55E" stroke-width="12" stroke-linecap="round" />
+                                </svg>
+                                
+                                <!-- Contenido central -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <div class="text-xs text-white mb-1">Total</div>
+                                    <div class="text-4xl font-bold text-white">48</div>
+                                    <div class="text-xs text-[#A0AEC0]">riesgos</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Lista de niveles de riesgo -->
+                        <div class="space-y-3">
+                            <!-- Crítico -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-red-500 rounded-sm"></div>
+                                    <span class="text-white">Crítico</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-white font-bold">16</span>
+                                    <span class="text-[#A0AEC0] text-sm">(33%)</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Alto -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                                    <span class="text-white">Alto</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-white font-bold">12</span>
+                                    <span class="text-[#A0AEC0] text-sm">(25%)</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Medio -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-yellow-500 rounded-sm"></div>
+                                    <span class="text-white">Medio</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-white font-bold">10</span>
+                                    <span class="text-[#A0AEC0] text-sm">(21%)</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Bajo -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-4 h-4 bg-green-500 rounded-sm"></div>
+                                    <span class="text-white">Bajo</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-white font-bold">10</span>
+                                    <span class="text-[#A0AEC0] text-sm">(21%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sección de riesgos críticos principales -->
+                <div class="mt-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-white text-lg font-medium">Principales riesgos críticos</div>
+                        <a href="#" class="text-sm text-blue-400 hover:text-blue-300">Ver todos</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- Riesgo 1: Fallo en sistemas críticos -->
+                        <div class="bg-[#2D1D56]/50 rounded-lg p-4 relative">
+                            <div class="flex items-start mb-2">
+                                <div class="bg-red-500/20 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span class="text-red-400 font-bold text-sm">R1</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white font-medium">Fallo en sistemas críticos</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <div class="flex items-center text-gray-400">
+                                    <span>Impacto: </span>
+                                    <span class="text-white ml-1">4.8/5</span>
+                                </div>
+                                <div class="px-3 py-0.5 bg-red-500/20 text-red-400 rounded-full text-xs">
+                                    Crítico
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Riesgo 2: Violación de datos -->
+                        <div class="bg-[#2D1D56]/50 rounded-lg p-4 relative">
+                            <div class="flex items-start mb-2">
+                                <div class="bg-red-500/20 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span class="text-red-400 font-bold text-sm">R2</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white font-medium">Violación de datos</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <div class="flex items-center text-gray-400">
+                                    <span>Impacto: </span>
+                                    <span class="text-white ml-1">4.7/5</span>
+                                </div>
+                                <div class="px-3 py-0.5 bg-red-500/20 text-red-400 rounded-full text-xs">
+                                    Crítico
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Riesgo 3: Incumplimiento normativo -->
+                        <div class="bg-[#2D1D56]/50 rounded-lg p-4 relative">
+                            <div class="flex items-start mb-2">
+                                <div class="bg-red-500/20 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span class="text-red-400 font-bold text-sm">R3</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white font-medium">Incumplimiento normativo</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <div class="flex items-center text-gray-400">
+                                    <span>Impacto: </span>
+                                    <span class="text-white ml-1">4.5/5</span>
+                                </div>
+                                <div class="px-3 py-0.5 bg-red-500/20 text-red-400 rounded-full text-xs">
+                                    Crítico
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botones de acción -->
+                <div class="grid grid-cols-2 gap-6 mt-8">
+                    <button type="button" class="py-3.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300 text-white text-sm font-medium transition duration-300 flex items-center justify-center">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Evaluar nuevo riesgo</span>
+                    </button>
+                    <button type="button" class="py-3.5 rounded-lg bg-[#2D1D56]/50 hover:bg-[#2D1D56]/70 text-white text-sm font-medium transition duration-300 flex items-center justify-center border border-purple-500/20">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                            <path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2v-1"></path>
+                            <path d="M9 15V7a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9z"></path>
+                        </svg>
+                        <span>Agendar evaluación</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
