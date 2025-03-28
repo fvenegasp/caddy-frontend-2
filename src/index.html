@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Favicon -->
+        <link rel="icon" type="icon" href="assets/images/caddy/logo_caddy_dos.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <title>CADDY - Panel de Control</title>
+        <style>
+            /* Estilos críticos para iconos */
+            [class^="icon-"] svg,
+            [class*=" icon-"] svg,
+            [class^="icon-menu-"] svg,
+            [class*=" icon-menu-"] svg,
+            .sidebar svg {
+                color: #FFFFFF !important;
+                stroke-width: 1.5px !important;
+                fill: none !important;
+            }
+            
+            .sidebar svg * {
+                stroke: #FFFFFF !important;
+                color: #FFFFFF !important;
+                stroke-width: 1.5px !important;
+            }
+            
+            /* Iconos específicos */
+            icon-menu-scrumboard svg *,
+            icon-menu-contacts svg *,
+            icon-menu-calendar svg *,
+            icon-menu-components svg *,
+            icon-menu-invoice svg * {
+                stroke: #FFFFFF !important;
+                stroke-width: 1.5px !important;
+                fill: none !important;
+            }
+            
+            /* Estilos para elementos activos */
+            .sidebar .nav-item > a.active,
+            .sidebar .nav-item > button.active {
+                background-color: #1a2d40 !important;
+                color: white !important;
+                border-left: 3px solid #FFFFFF !important;
+                font-weight: 600 !important;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+            }
+            
+            .sidebar .nav-item > a.active > div > span,
+            .sidebar .nav-item > button.active > div > span {
+                color: white !important;
+                letter-spacing: 0.2px;
+            }
+            
+            /* Iconos en elementos activos */
+            .sidebar .nav-item > a.active svg *,
+            .sidebar .nav-item > button.active svg * {
+                stroke: white !important;
+                color: white !important;
+                fill: white !important;
+            }
+            
+            /* Iconos específicos para la sección USER AND PAGES/SUPPORTS */
+            .sidebar h2 + ul .nav-item svg,
+            .sidebar h2 + ul .nav-item svg * {
+                stroke: #FFFFFF !important;
+                color: #FFFFFF !important;
+                stroke-width: 2px !important;
+                opacity: 1 !important;
+            }
+            
+            /* Estilos específicos para iconos de usuarios y páginas */
+            .sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-users svg *,
+            .sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-pages svg *,
+            .sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-documentation svg *,
+            .sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-elements svg *,
+            .sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-authentication svg * {
+                stroke: #FFFFFF !important;
+                color: #FFFFFF !important;
+                stroke-width: 2.5px !important;
+                opacity: 1 !important;
+                fill: none !important;
+            }
+            
+            /* Estilo específico para icono de autenticación */
+            icon-menu-authentication svg,
+            icon-menu-authentication svg * {
+                stroke: #FFFFFF !important;
+                color: #FFFFFF !important;
+                stroke-width: 2.5px !important;
+                opacity: 1 !important;
+                fill: none !important;
+            }
+            
+            /* Asegurar que los iconos sean visibles con fondo oscuro */
+            .sidebar h2 + ul .nav-item a div:first-child svg,
+            .sidebar h2 + ul .nav-item button div:first-child svg {
+                color: #FFFFFF !important;
+                fill: none !important;
+                stroke-width: 2px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <app-root> </app-root>
+    </body>
+</html>

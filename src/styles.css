@@ -1,0 +1,168 @@
+/* Logo personalizado */
+.w-logo-large {
+    width: 8rem;
+} 
+
+/* Mejora de visibilidad para elementos activos */
+.sidebar .nav-item > a.active,
+.sidebar .nav-item > button.active {
+    position: relative;
+    border-left: 3px solid #FFFFFF !important;
+    background-color: #1a2d40 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.sidebar .nav-item > a.active > div > span,
+.sidebar .nav-item > button.active > div > span {
+    color: white !important;
+    letter-spacing: 0.2px;
+}
+
+/* Iconos en elementos activos */
+.sidebar .nav-item > a.active svg *,
+.sidebar .nav-item > button.active svg * {
+    stroke: white !important;
+    color: white !important;
+    fill: white !important;
+}
+
+/* Mejora para iconos en secciones oscuras */
+.sidebar .nav-item svg,
+.sidebar .nav-item svg * {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+    fill: none !important;
+    stroke-width: 1.5px !important;
+}
+
+/* Iconos específicos para la sección USER AND PAGES/SUPPORTS */
+.sidebar h2 + ul .nav-item svg,
+.sidebar h2 + ul .nav-item svg * {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+    stroke-width: 2px !important;
+    opacity: 1 !important;
+}
+
+/* Estilos específicos para iconos de usuarios y páginas */
+.sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-users svg *,
+.sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-pages svg *,
+.sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-documentation svg *,
+.sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-elements svg *,
+.sidebar h2[class*="uppercase"] + ul .nav-item icon-menu-authentication svg * {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+    stroke-width: 2.5px !important;
+    opacity: 1 !important;
+    fill: none !important;
+}
+
+/* Estilo específico para icono de autenticación */
+icon-menu-authentication svg,
+icon-menu-authentication svg * {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+    stroke-width: 2.5px !important;
+    opacity: 1 !important;
+    fill: none !important;
+}
+
+/* Asegurar que los iconos sean visibles con fondo oscuro */
+.sidebar h2 + ul .nav-item a div:first-child svg,
+.sidebar h2 + ul .nav-item button div:first-child svg {
+    color: #FFFFFF !important;
+    fill: none !important;
+    stroke-width: 2px !important;
+}
+
+/* Fix para iconos de navegación - Versión completa */
+[class^="icon-"] svg,
+[class*=" icon-"] svg {
+    color: #FFFFFF !important;
+    fill: none !important;
+}
+
+[class^="icon-"] svg path,
+[class*=" icon-"] svg path,
+[class^="icon-"] svg line,
+[class*=" icon-"] svg line,
+[class^="icon-"] svg circle,
+[class*=" icon-"] svg circle,
+[class^="icon-"] svg rect,
+[class*=" icon-"] svg rect {
+    stroke: #FFFFFF !important;
+    fill: none !important;
+    stroke-width: 1.5px !important;
+}
+
+[class^="icon-menu-"] svg,
+[class*=" icon-menu-"] svg {
+    color: #FFFFFF !important;
+    fill: none !important;
+}
+
+[class^="icon-menu-"] svg path,
+[class*=" icon-menu-"] svg path,
+[class^="icon-menu-"] svg line,
+[class*=" icon-menu-"] svg line,
+[class^="icon-menu-"] svg circle,
+[class*=" icon-menu-"] svg circle,
+[class^="icon-menu-"] svg rect,
+[class*=" icon-menu-"] svg rect {
+    stroke: #FFFFFF !important;
+    opacity: 1 !important;
+    stroke-width: 1.5px !important;
+}
+
+/* Estilos para svg directos en la navegación */
+.sidebar svg {
+    color: #FFFFFF !important;
+    fill: none !important;
+    stroke-width: 1.5px !important;
+}
+
+.sidebar svg path,
+.sidebar svg line,
+.sidebar svg circle,
+.sidebar svg rect {
+    stroke: #FFFFFF !important;
+    stroke-width: 1.5px !important;
+}
+
+/* Hack específico para iconos que usan fill en lugar de stroke */
+.sidebar svg path[fill="currentColor"] {
+    fill: #FFFFFF !important;
+    stroke: none !important;
+}
+
+/* Hack para SVG sin paths directos */
+.sidebar svg * {
+    color: #FFFFFF !important;
+}
+
+/* Para iconos en el grupo de navegación */
+.nav-item .shrink-0,
+.nav-item .flex-none {
+    color: #FFFFFF !important;
+}
+
+/* Hack específico para iconos problemáticos */
+icon-menu-scrumboard svg,
+icon-menu-contacts svg,
+icon-menu-calendar svg,
+icon-menu-components svg,
+icon-menu-invoice svg {
+    color: #FFFFFF !important;
+}
+
+icon-menu-scrumboard svg *,
+icon-menu-contacts svg *,
+icon-menu-calendar svg *,
+icon-menu-components svg *,
+icon-menu-invoice svg * {
+    stroke: #FFFFFF !important;
+    fill: none !important;
+    stroke-width: 1.5px !important;
+} 
