@@ -29,7 +29,7 @@
                         <input
                             type="text"
                             class="peer form-input bg-[#1E3A6D] text-[#E5E5E5] placeholder:text-[#E5E5E5]/50 placeholder:tracking-widest sm:bg-transparent ltr:pl-9 ltr:pr-9 ltr:sm:pr-4 rtl:pl-9 rtl:pr-9 rtl:sm:pl-4"
-                            placeholder="Search..."
+                            placeholder="Buscar..."
                         />
                         <button type="button" class="absolute inset-0 h-9 w-9 appearance-none peer-focus:text-[#5BA38F] ltr:right-auto rtl:left-auto">
                             <icon-search class="mx-auto" />
@@ -125,7 +125,9 @@
             <div class="dropdown shrink-0">
                 <div hlMenu class="!block">
                     <button type="button" hlMenuButton class="group relative block">
-                        <img class="h-9 w-9 rounded-full object-cover saturate-50 group-hover:saturate-100" src="/assets/images/user-profile.jpeg" alt="" />
+                        <div class="h-9 w-9 rounded-full bg-[#1E3A6D] flex items-center justify-center text-white">
+                            <icon-user class="h-5 w-5" />
+                        </div>
                     </button>
                     <ul
                         *hlMenuItems
@@ -135,38 +137,19 @@
                         <li>
                             <div class="flex items-center px-4 py-4">
                                 <div class="flex-none">
-                                    <img class="h-10 w-10 rounded-md object-cover" src="/assets/images/user-profile.jpeg" alt="" />
+                                    <div class="h-10 w-10 rounded-md bg-[#1E3A6D] flex items-center justify-center text-white">
+                                        <icon-user class="h-6 w-6" />
+                                    </div>
                                 </div>
                                 <div class="truncate ltr:pl-4 rtl:pr-4">
                                     <h4 class="text-base">
-                                        John Doe<span class="rounded bg-success-light px-1 text-xs text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                        Felipe Horta<span class="rounded bg-success-light px-1 text-xs text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                     </h4>
                                     <a class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white" href="javascript:;">
-                                        {{"johndoe@gmail.com"}}
+                                        {{"felipe.horta@caddy.cl"}}
                                     </a>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <a routerLink="/users/profile" *hlMenuItem="let menuItem" class="dark:hover:text-white">
-                                <icon-user class="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
-
-                                Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/apps/mailbox" *hlMenuItem="let menuItem" class="dark:hover:text-white">
-                                <icon-mail class="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
-
-                                Inbox
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/auth/boxed-lockscreen" *hlMenuItem="let menuItem" class="dark:hover:text-white">
-                                <icon-lock-dots class="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
-
-                                Lock Screen
-                            </a>
                         </li>
                         <li class="border-t border-white-light dark:border-white-light/10">
                             <a routerLink="/auth/boxed-signin" *hlMenuItem="let menuItem" class="!py-3 text-danger">
